@@ -57,4 +57,15 @@ public class Fraction {
         Fraction c = reduce(new Fraction(rezN,rezD));
         return c;
     }
+
+        @Override
+    public String toString() {
+        int a = this.d;
+        int b = this.n;
+        String str1 = String.valueOf(a);
+        String str2 = String.valueOf(b);
+        String str3 = "/";
+        String str = str2+str3+str1;
+        return str;
+    }
 }
