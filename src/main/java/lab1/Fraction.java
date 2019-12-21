@@ -45,10 +45,16 @@ public class Fraction {
     }
 
     public static Fraction multiply(Fraction a, Fraction b){
-               int rezN = a.n * b.n;
-               int rezD = a.d * b.d;
-               Fraction c = reduce(new Fraction(rezN,rezD));
-               return c;
+        int rezN = a.n * b.n;
+        int rezD = a.d * b.d;
+        Fraction c = reduce(new Fraction(rezN,rezD));
+        return c;
     }
-    
+
+    public static Fraction division(Fraction a, Fraction b){
+        int rezN = a.n * b.d;
+        int rezD = a.d * b.n;
+        Fraction c = reduce(new Fraction(rezN,rezD));
+        return c;
+    }
 }
