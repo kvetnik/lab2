@@ -3,7 +3,7 @@ package lab1;
 public class Fraction {
     private int n,d;
     public Fraction(){}
-    //лаба1
+    //лаба2
     /** 
      * Create a new Fraction with specified numeration and denomimator
      * @param n
