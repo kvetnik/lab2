@@ -3,7 +3,7 @@ package lab1;
 public class Fraction {
     private int n,d;
     public Fraction(){}
-    //лаба1
+    //лаба2
     /** 
      * Create a new Fraction with specified numeration and denomimator
      * @param n
@@ -56,5 +56,33 @@ public class Fraction {
         int rezD = a.d * b.n;
         Fraction c = reduce(new Fraction(rezN,rezD));
         return c;
+    }
+
+    @Override
+    public String toString() {
+        int a = this.d;
+        int b = this.n;
+        String str1 = String.valueOf(a);
+        String str2 = String.valueOf(b);
+        String str3 = "/";
+        String str = str2+str3+str1;
+        return str;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj == null || obj.getClass() != this.getClass()) {
+            return false;
+        }
+
+        Fraction temp = (Fraction) obj;
+        if(this.n ==  temp.n && this.d == temp.d){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
