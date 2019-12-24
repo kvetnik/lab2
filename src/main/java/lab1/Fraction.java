@@ -85,4 +85,11 @@ public class Fraction {
             return false;
         }
     }
+
+    public void turnOver(){
+        int rezN = this.d;
+        int rezD = this.n;
+        this.n = rezN;
+        this.d = rezD;
+    }
 }
